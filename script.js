@@ -28,3 +28,8 @@ document.getElementById("answer").innerText=cards[index].a;
 document.getElementById("question").style.display="block";
 document.getElementById("answer").style.display="none";
 }
+fetch("backend/get_flashcards.php")
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+});
